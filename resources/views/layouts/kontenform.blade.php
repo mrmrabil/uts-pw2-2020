@@ -59,7 +59,8 @@
                                     <div class="col-md-6">
                                         <div class="main-card mb-3 card">
                                             <div class="card-body"><h5 class="card-title">Tambah Produk</h5>
-                                                <form class="">
+                                                <form class="" action="<?=route('proses-form')?>" method="POST">
+                                                    @csrf
                                                     <div class="position-relative form-group"><label for="nama-produk" class="">Nama Produk</label><input name="nama-produk" id="nama-produk" placeholder="Masukkan nama produk" type="text" class="form-control"></div>
 
                                                     <div class="position-relative form-group"><label for="kategori" class="">Kategori</label><select name="kategori" id="kategori" class="form-control">
@@ -80,6 +81,6 @@
                                 </div>
 
                     </div>
-                    @include('layouts.parsial.footer')
+                    @include('layouts.footer')
                     </div>
         </div>

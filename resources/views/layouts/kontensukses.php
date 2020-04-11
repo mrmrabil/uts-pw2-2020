@@ -1,4 +1,5 @@
-<div class="app-main__inner">
+<div class="app-main__outer">
+                    <div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
@@ -6,8 +7,8 @@
                                         <i class="pe-7s-display1 icon-gradient bg-premium-dark">
                                         </i>
                                     </div>
-                                    <div>Daftar Produk
-                                        <div class="page-title-subheading">Produk terbaru
+                                    <div>Detail Produk
+                                        <div class="page-title-subheading">Detail produk terbaru
                                         </div>
                                     </div>
                                 </div>
@@ -53,30 +54,19 @@
                                     </div>
                                 </div>    </div>
                         </div>
-
+                        <div class="alert alert-sukses alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Success!</strong> Indicates a successful or positive action.
+                        </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="main-card mb-3 card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Daftar Produk</h5>
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Nama Produk</th>
-                                                            <th>Kategori</th>
-                                                            <th>Harga</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>xxx</td>
-                                                            <td>xxx</td>
-                                                            <td>xxx</td>
-                                                            <td>xxx</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                            <div class="card-body"><h5 class="card-title">Detail Produk</h5>
+                                                <ul>
+                                                    <li>Nama Produk: <?=$new_data['nama_produk'];?></li>
+                                                    <li>Kategori: <?=$new_data['kategori'];?></li>
+                                                    <li>Harga: <?=$new_data['harga'];?></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -84,4 +74,5 @@
                                 </div>
 
                     </div>
- @include('layouts.parsial.footer')
+                    @include('layouts.footer')
+                        </div>

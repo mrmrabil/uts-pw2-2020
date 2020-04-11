@@ -1,5 +1,4 @@
-<div class="app-main__outer">
-                    <div class="app-main__inner">
+<div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
@@ -7,8 +6,8 @@
                                         <i class="pe-7s-display1 icon-gradient bg-premium-dark">
                                         </i>
                                     </div>
-                                    <div>Detail Produk
-                                        <div class="page-title-subheading">Detail produk terbaru
+                                    <div>Daftar Produk
+                                        <div class="page-title-subheading">Produk terbaru
                                         </div>
                                     </div>
                                 </div>
@@ -54,19 +53,35 @@
                                     </div>
                                 </div>    </div>
                         </div>
-                        <div class="alert alert-success alert-dismissible">
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            <strong>Success!</strong> Indicates a successful or positive action.
-                        </div>
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="main-card mb-3 card">
-                                            <div class="card-body"><h5 class="card-title">Detail Produk</h5>
-                                                <ul>
-                                                    <li>Nama Produk: xxx</li>
-                                                    <li>Kategori: xxx</li>
-                                                    <li>Harga: xxx</li>
-                                                </ul>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Daftar Produk</h5>
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No</th>
+                                                            <th>Nama Produk</th>
+                                                            <th>Kategori</th>
+                                                            <th>Harga</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php
+$i = 1;
+foreach ($produk as $p) {
+    echo '<tr>';
+    echo '<td>' . $i . '</td>';
+    echo '<td>' . $p['nama_produk'] . '</td>';
+    echo '<td>' . $p['kategori'] . '</td>';
+    echo '<td>' . $p['harga'] . '</td>';
+    echo '</tr>';
+    $i++;
+}?>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -74,5 +89,4 @@
                                 </div>
 
                     </div>
-                    @include('layouts.parsial.footer')
-                        </div>
+ @include('layouts.footer')
